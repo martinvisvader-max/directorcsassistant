@@ -92,6 +92,22 @@ Per-person template:
 6. `Questions Martin should ask`
 7. `Suggested follow-ups after the 1:1`
 
+### 5. Thread brief
+
+Purpose:
+
+- let Martin provide a Slack thread plus document context on demand
+- produce a clean summary of what matters
+- identify risks, open questions, and ideal next steps
+- suggest a concise reply or leadership steer
+
+Expected output:
+
+1. `Summary`
+2. `What the assistant sees`
+3. `Recommended next steps`
+4. `Suggested Martin reply`
+
 ## Manual trigger V1
 
 Martin should be able to request an outcome on demand from Slack.

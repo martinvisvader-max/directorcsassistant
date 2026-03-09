@@ -34,6 +34,22 @@ textarea {
   font: inherit;
 }
 
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel-strong);
+  color: var(--text);
+  padding: 12px 14px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
 button {
   cursor: pointer;
 }
@@ -309,14 +325,6 @@ button {
 .field span {
   color: var(--muted);
   font-size: 13px;
-}
-
-.field select {
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  background: var(--panel-strong);
-  color: var(--text);
-  padding: 12px 14px;
 }
 
 .output-box {

@@ -67,6 +67,7 @@ It includes:
 - `Weekly`
 - `1:1 Prep`
 - `Manual Generate`
+- `Thread Brief`
 
 To enable it on GitHub:
 

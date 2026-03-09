@@ -191,6 +191,14 @@ const weeklyData = {
   ],
 };
 
+const threadSample = {
+  link: "Rohlik MCP / Product discovery thread",
+  text:
+    "Customer wants to test MCP and assumes the capability is already available for broader usage. Sofia is preparing the wording, Product will join the call, and there is uncertainty around what is actually ready vs still exploratory.",
+  docs:
+    "Notes:\n- Goal of the call is discovery and use-case understanding\n- Avoid overpromising on production readiness\n- Position Product involvement as a way to understand needs and shape next steps\n- Keep the message focused on customer value and realistic scope",
+};
+
 function setHero(view) {
   const title = document.getElementById("hero-title");
   const subtitle = document.getElementById("hero-subtitle");
@@ -207,6 +215,10 @@ function setHero(view) {
     oneOnOne: [
       "1:1 Prep",
       "Prepare for direct-report check-ins using your actual agenda plus the Martin layer.",
+    ],
+    thread: [
+      "Thread Brief",
+      "Paste a Slack thread and related document notes to get a fast summary, risks, and recommended next steps.",
     ],
     manual: [
       "Manual Generate",
@@ -362,6 +374,84 @@ function generateManualOutput() {
   ].join("\n");
 }
 
+function buildThreadBrief() {
+  const link = document.getElementById("thread-link").value.trim();
+  const threadText = document.getElementById("thread-text").value.trim();
+  const docsText = document.getElementById("thread-docs").value.trim();
+
+  const combined = `${threadText}\n${docsText}`.toLowerCase();
+  const mentionsProduct =
+    combined.includes("product") ||
+    combined.includes("mcp") ||
+    combined.includes("feature") ||
+    combined.includes("roadmap");
+  const mentionsCustomer =
+    combined.includes("customer") ||
+    combined.includes("renewal") ||
+    combined.includes("prospect") ||
+    combined.includes("account");
+  const mentionsRisk =
+    combined.includes("risk") ||
+    combined.includes("uncertain") ||
+    combined.includes("blocked") ||
+    combined.includes("overpromise") ||
+    combined.includes("scope");
+
+  const summaryLine = threadText
+    ? threadText.split(". ").slice(0, 2).join(". ").trim()
+    : "No thread text provided.";
+
+  const risks = [
+    mentionsRisk
+      ? "Expectation risk is visible and should be managed explicitly."
+      : "No obvious hard risk language found, but ownership should still be clear.",
+    mentionsProduct
+      ? "Product-facing topics need disciplined wording to avoid accidental commitments."
+      : "Cross-functional dependency should be checked before committing externally.",
+    mentionsCustomer
+      ? "Customer-facing communication should stay tied to value, scope, and next owner."
+      : "The thread should be translated into a clear internal action with one owner.",
+  ];
+
+  const nextSteps = [
+    "State the exact purpose of the thread in one sentence.",
+    "Name the owner, deadline, and required output.",
+    mentionsProduct
+      ? "Separate what is available now from what is exploratory or future-facing."
+      : "Clarify what is confirmed versus still assumed.",
+    mentionsCustomer
+      ? "Prepare one external-safe message that does not overpromise."
+      : "Prepare one concise internal summary for leadership visibility.",
+  ];
+
+  const assistantReply = mentionsCustomer
+    ? "Thanks all. My take is we should keep this focused on customer value and realistic scope. Let us align on what is confirmed today, what still needs Product input, and who owns the next step. Please come back with one clear recommendation and timeline."
+    : "Thanks all. Let us turn this into one clear recommendation with owner, timing, and expected output. I would like to avoid leaving this as an open discussion thread.";
+
+  return [
+    `Thread brief${link ? `: ${link}` : ""}`,
+    "",
+    "Summary:",
+    `- ${summaryLine}`,
+    "",
+    "What the assistant sees:",
+    ...risks.map((item) => `- ${item}`),
+    "",
+    "Recommended next steps:",
+    ...nextSteps.map((item) => `- ${item}`),
+    "",
+    "Suggested Martin reply:",
+    assistantReply,
+  ].join("\n");
+}
+
+function loadThreadSample() {
+  document.getElementById("thread-link").value = threadSample.link;
+  document.getElementById("thread-text").value = threadSample.text;
+  document.getElementById("thread-docs").value = threadSample.docs;
+  document.getElementById("thread-output").textContent = buildThreadBrief();
+}
+
 function wireEvents() {
   document.querySelectorAll(".nav-button").forEach((button) => {
     button.addEventListener("click", () => setView(button.dataset.view));
@@ -387,6 +477,14 @@ function wireEvents() {
     setView("manual");
     document.getElementById("manual-output").textContent = generateManualOutput();
   });
+
+  document.getElementById("generate-thread-brief").addEventListener("click", () => {
+    document.getElementById("thread-output").textContent = buildThreadBrief();
+  });
+
+  document.getElementById("load-thread-sample").addEventListener("click", () => {
+    loadThreadSample();
+  });
 }
 
 function init() {
@@ -395,6 +493,8 @@ function init() {
   renderPeopleSelector();
   renderOneOnOne();
   document.getElementById("manual-output").textContent = generateManualOutput();
+  document.getElementById("thread-output").textContent =
+    "Paste a Slack thread and any document notes, then click Generate thread brief.";
   wireEvents();
 }
 

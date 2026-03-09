@@ -19,6 +19,7 @@
           <button class="nav-button is-active" data-view="today">Today</button>
           <button class="nav-button" data-view="weekly">Weekly</button>
           <button class="nav-button" data-view="oneOnOne">1:1 Prep</button>
+          <button class="nav-button" data-view="thread">Thread Brief</button>
           <button class="nav-button" data-view="manual">Manual Generate</button>
         </nav>
 
@@ -184,6 +185,65 @@
               <div class="divider"></div>
               <div class="panel-subtitle">Suggested follow-ups</div>
               <div id="oneOnOne-followups" class="bullet-list"></div>
+            </section>
+          </div>
+        </section>
+
+        <section id="thread-view" class="view">
+          <div class="grid two-columns">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <div class="panel-kicker">Thread assistant</div>
+                  <h3>Paste the context</h3>
+                </div>
+              </div>
+
+              <label class="field">
+                <span>Thread URL or title</span>
+                <input
+                  id="thread-link"
+                  type="text"
+                  placeholder="https://slack.com/... or short thread title"
+                />
+              </label>
+
+              <label class="field">
+                <span>Thread text</span>
+                <textarea
+                  id="thread-text"
+                  rows="8"
+                  placeholder="Paste the relevant Slack thread here."
+                ></textarea>
+              </label>
+
+              <label class="field">
+                <span>Referenced docs or notes</span>
+                <textarea
+                  id="thread-docs"
+                  rows="7"
+                  placeholder="Paste links, notes, snippets, or document highlights here."
+                ></textarea>
+              </label>
+
+              <div class="button-row">
+                <button id="generate-thread-brief" class="action-button primary">
+                  Generate thread brief
+                </button>
+                <button id="load-thread-sample" class="action-button secondary">
+                  Load sample
+                </button>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <div class="panel-kicker">Assistant outcome</div>
+                  <h3>Summary and next steps</h3>
+                </div>
+              </div>
+              <pre id="thread-output" class="output-box"></pre>
             </section>
           </div>
         </section>
