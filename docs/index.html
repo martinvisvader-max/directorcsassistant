@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Director CS Assistant Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-kicker">GitHub Pages demo</div>
+          <h1>Director CS Assistant</h1>
+          <p>Static leadership dashboard for fast testing of the UX and output format.</p>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-button is-active" data-view="today">Today</button>
+          <button class="nav-button" data-view="weekly">Weekly</button>
+          <button class="nav-button" data-view="oneOnOne">1:1 Prep</button>
+          <button class="nav-button" data-view="manual">Manual Generate</button>
+        </nav>
+
+        <section class="panel compact">
+          <div class="panel-title">Cadence</div>
+          <ul class="plain-list">
+            <li>Daily: 08:30</li>
+            <li>Midday: 12:45</li>
+            <li>Weekly: Thursday 15:00</li>
+          </ul>
+        </section>
+
+        <section class="panel compact">
+          <div class="panel-title">Priority order</div>
+          <ol class="plain-list numbered">
+            <li>Customer escalation</li>
+            <li>Renewal risk</li>
+            <li>Ask from Simon Farthing</li>
+            <li>Exec ask</li>
+            <li>People issue</li>
+            <li>Strategic project</li>
+            <li>Process gap</li>
+          </ol>
+        </section>
+      </aside>
+
+      <main class="content">
+        <header class="hero">
+          <div>
+            <div class="eyebrow">Web-first MVP</div>
+            <h2 id="hero-title">Today</h2>
+            <p id="hero-subtitle">
+              Review the signal that matters now and test the intended briefing format.
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <button id="refresh-demo" class="action-button secondary">Refresh demo</button>
+            <button id="send-sample" class="action-button primary">Send sample to Slack later</button>
+          </div>
+        </header>
+
+        <section id="today-view" class="view is-visible">
+          <div class="grid two-columns">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <div class="panel-kicker">Daily agenda</div>
+                  <h3>Top priorities</h3>
+                </div>
+                <span class="badge">08:30</span>
+              </div>
+              <div id="today-priorities" class="card-list"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <div class="panel-kicker">Action layer</div>
+                  <h3>What to do next</h3>
+                </div>
+              </div>
+              <div id="today-actions" class="bullet-list"></div>
+              <div class="divider"></div>
+              <div class="panel-subtitle">Wins worth amplifying</div>
+              <div id="today-wins" class="bullet-list"></div>
+            </section>
+          </div>
+
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="panel-kicker">Evidence</div>
+                <h3>Why the assistant flagged these items</h3>
+              </div>
+            </div>
+            <div id="today-evidence" class="evidence-list"></div>
+          </section>
+        </section>
+
+        <section id="weekly-view" class="view">
+          <div class="grid two-columns">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <div class="panel-kicker">Weekly wrap-up</div>
+                  <h3>Wins and risks</h3>
+                </div>
+                <span class="badge">Thu 15:00</span>
+              </div>
+              <div class="subgrid">
+                <div>
+                  <div class="panel-subtitle">Wins</div>
+                  <div id="weekly-wins" class="bullet-list"></div>
+                </div>
+                <div>
+                  <div class="panel-subtitle">Risks</div>
+                  <div id="weekly-risks" class="bullet-list"></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <div class="panel-kicker">Leadership lens</div>
+                  <h3>Open loops and actions</h3>
+                </div>
+              </div>
+              <div class="panel-subtitle">Open loops</div>
+              <div id="weekly-loops" class="bullet-list"></div>
+              <div class="divider"></div>
+              <div class="panel-subtitle">Actions for next week</div>
+              <div id="weekly-actions" class="bullet-list"></div>
+            </section>
+          </div>
+        </section>
+
+        <section id="oneOnOne-view" class="view">
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="panel-kicker">1:1 prep</div>
+                <h3>Direct reports</h3>
+              </div>
+            </div>
+            <div id="people-selector" class="selector-row"></div>
+          </div>
+
+          <div class="grid two-columns">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <div class="panel-kicker">Prepared agenda</div>
+                  <h3 id="oneOnOne-name">Matej Cambal</h3>
+                </div>
+              </div>
+              <div class="panel-subtitle">Wins from the recent week</div>
+              <div id="oneOnOne-wins" class="bullet-list"></div>
+              <div class="divider"></div>
+              <div class="panel-subtitle">Top 3-5 priorities for the upcoming week</div>
+              <div id="oneOnOne-priorities" class="bullet-list"></div>
+              <div class="divider"></div>
+              <div class="panel-subtitle">Challenges where Martin's support may be needed</div>
+              <div id="oneOnOne-challenges" class="bullet-list"></div>
+              <div class="divider"></div>
+              <div class="panel-subtitle">Any other business</div>
+              <div id="oneOnOne-business" class="bullet-list"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <div class="panel-kicker">Martin layer</div>
+                  <h3>Feedback and follow-ups</h3>
+                </div>
+              </div>
+              <div class="panel-subtitle">Feedback and coaching angles</div>
+              <div id="oneOnOne-feedback" class="bullet-list"></div>
+              <div class="divider"></div>
+              <div class="panel-subtitle">Questions to ask</div>
+              <div id="oneOnOne-questions" class="bullet-list"></div>
+              <div class="divider"></div>
+              <div class="panel-subtitle">Suggested follow-ups</div>
+              <div id="oneOnOne-followups" class="bullet-list"></div>
+            </section>
+          </div>
+        </section>
+
+        <section id="manual-view" class="view">
+          <div class="grid two-columns">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <div class="panel-kicker">Manual generate</div>
+                  <h3>Request an outcome</h3>
+                </div>
+              </div>
+
+              <label class="field">
+                <span>Briefing type</span>
+                <select id="manual-type">
+                  <option value="daily">Daily agenda</option>
+                  <option value="midday">Midday agenda</option>
+                  <option value="weekly">Weekly wrap-up</option>
+                  <option value="oneOnOne">1:1 prep</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Person</span>
+                <select id="manual-person">
+                  <option value="matej">Matej Cambal</option>
+                  <option value="andrea">Andrea Svatikova</option>
+                  <option value="anastasia">Anastasia Kutasova</option>
+                </select>
+              </label>
+
+              <div class="button-row">
+                <button id="generate-preview" class="action-button primary">Generate preview</button>
+                <button id="copy-output" class="action-button secondary">Copy output</button>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <div class="panel-kicker">Slack-ready output</div>
+                  <h3>Preview</h3>
+                </div>
+              </div>
+              <pre id="manual-output" class="output-box"></pre>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

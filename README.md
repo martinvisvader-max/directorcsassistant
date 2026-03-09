@@ -51,6 +51,36 @@ Priority order currently defined as:
 - `docs/roadmap-v1.md`
 - `docs/output-templates-v1.md`
 
+## GitHub Pages demo
+
+A static demo dashboard is available directly from the `docs/` folder:
+
+- `docs/index.html`
+- `docs/styles.css`
+- `docs/app.js`
+
+This version is designed for `GitHub Pages` and does not require backend hosting.
+
+It includes:
+
+- `Today`
+- `Weekly`
+- `1:1 Prep`
+- `Manual Generate`
+
+To enable it on GitHub:
+
+1. open repository `Settings`
+2. open `Pages`
+3. set `Build and deployment` source to `Deploy from a branch`
+4. choose branch `main`
+5. choose folder `/docs`
+6. save
+
+Your demo should then appear at:
+
+- `https://<github-username>.github.io/<repo-name>/`
+
 ## App scaffold
 
 The repository now includes a `Next.js` scaffold prepared for `Railway`:
