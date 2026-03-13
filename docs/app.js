@@ -7,91 +7,91 @@ const people = {
   matej: {
     name: "Matej Cambal",
     wins: [
-      "BC enablement sessions are lined up and visible to the wider POW team.",
-      "Strong early signal gathering on strategic features and customer fit.",
+      "BC signal is helping shape event support and technical-commercial follow-up threads.",
+      "Coverage on strategic feature and market asks remains visible across accounts.",
     ],
     priorities: [
-      "Turn feature feedback into a usable adoption and upsell recommendation.",
-      "Close the loop on BC input for translation and AI-related opportunities.",
-      "Keep BC coverage aligned to the most strategic expansion motions.",
+      "Support the highest-priority account asks where scope, feasibility, and audience matter.",
+      "Turn strategic asks into concise recommendations with owner and next step.",
+      "Keep BC focus on the accounts with the strongest commercial or exec visibility.",
     ],
     challenges: [
-      "Needs sharper evidence on what truly converts vs what creates noise.",
-      "Could use leadership backing when turning BC signal into cross-functional action.",
+      "Needs faster synthesis when multiple people contribute to one strategic ask.",
+      "Could use your backing when a request needs sharper commercial framing.",
     ],
     business: [
-      "Follow-up on the strongest customer stories for benchmarking and compound value.",
+      "Confirm where BC effort should go first after your PTO catch-up.",
     ],
     feedback: [
-      "Push for clearer prioritization between interesting signal and commercial signal.",
-      "Ask for more explicit owner and deadline on BC asks that matter upward.",
+      "Keep separating interesting input from input that changes leadership action.",
+      "Ask for owner plus deadline earlier when a thread will need your decision.",
     ],
     questions: [
-      "Which BC-led insights are strongest enough to influence Product or Simon-level conversations?",
-      "Where do you need me to unblock cross-functional follow-through?",
+      "Which BC-led asks over the last three days actually require your intervention?",
+      "Where do you need me to unblock cross-functional follow-through this week?",
     ],
     followups: [
-      "Request a shortlist of top feature opportunities with confidence and effort.",
+      "Ask for a shortlist of the top account asks that deserve leadership airtime.",
     ],
   },
   andrea: {
     name: "Andrea Svatikova",
     wins: [
-      "CSM enablement cadence is visible and well organized.",
-      "Team messaging and readiness support appear structured and scalable.",
+      "Customer-facing event and invite coordination kept moving while you were out.",
+      "POW benchmarking discussion now has clear customer examples and stronger field perspective.",
     ],
     priorities: [
-      "Make sure detractor and neutral NPS follow-ups are real, not only announced.",
-      "Keep CSM messaging aligned on AI, Loomi, and adoption positioning.",
-      "Surface the highest-risk customer sentiment items early.",
+      "Turn benchmarking discussion into a clear point of view the team can use externally.",
+      "Keep event/customer invite threads moving without losing ownership.",
+      "Surface any account sentiment issues that need leader involvement early.",
     ],
     challenges: [
-      "Needs a tighter loop between team activity and actual customer risk reduction.",
-      "Could use help escalating recurring adoption blockers sooner.",
+      "Needs a clean line between useful customer context and true escalation signal.",
+      "Could use your support where customer asks need stronger commercial framing.",
     ],
     business: [
-      "Confirm where the team needs stronger support on strategic messaging.",
+      "Decide which benchmarking or event-related threads deserve wider leadership escalation.",
     ],
     feedback: [
-      "Drive one layer deeper from activity to impact: what changed for the customer?",
-      "Push for earlier risk flagging on sentiment and adoption slippage.",
+      "Push the team from descriptive updates to recommendation plus owner.",
+      "Make sure follow-up quality matters more than thread activity.",
     ],
     questions: [
-      "Which detractors or neutrals are truly under control and which are still at risk?",
-      "What do you need from me to increase follow-through quality?",
+      "Which customer-facing topics from the last three days still need your intervention?",
+      "What do you need from me to improve the quality and speed of follow-through?",
     ],
     followups: [
-      "Review top at-risk accounts and agree specific owner-based next steps.",
+      "Review the top customer-facing threads and lock owner plus next step.",
     ],
   },
   anastasia: {
     name: "Anastasia Kutasova",
     wins: [
-      "Delivery and TC support remain visible in cross-functional requests.",
-      "The team is in the flow of strategic and technical support conversations.",
+      "Delivery and TC angle remains part of strategic asks rather than arriving too late.",
+      "Technical support visibility stayed present in multi-party threads while you were away.",
     ],
     priorities: [
-      "Make delivery and TC blockers visible earlier in high-risk customer motions.",
-      "Provide realistic input on POC scope, implementation effort, and technical risk.",
-      "Support high-priority asks where technical feasibility needs leadership clarity.",
+      "Keep delivery or TC effort visible in any ask that may drift into implementation work.",
+      "Flag technical feasibility and effort earlier on strategic customer motions.",
+      "Support the few asks that need realism rather than optimism.",
     ],
     challenges: [
-      "Needs sharper escalation paths when requests drift into disguised implementation work.",
-      "Could use support in separating 'possible' from 'worth doing now'.",
+      "Needs a sharper line between technically possible and worth doing now.",
+      "Could use your backing when a thread needs scope control or pushback.",
     ],
     business: [
-      "Reconfirm where TC leadership input should be built into strategic asks sooner.",
+      "Review where TC input should be mandatory before a customer-facing commitment is made.",
     ],
     feedback: [
-      "Push for earlier intervention on delivery deadlocks before they become escalation-level.",
-      "Keep technical effort visible when commercial asks start expanding in scope.",
+      "Push for earlier intervention before a delivery concern becomes an escalation.",
+      "Keep technical effort visible when requests start expanding in scope.",
     ],
     questions: [
       "Which current asks are technically feasible but operationally risky?",
-      "Where do you need my cover to push back on scope or timing?",
+      "Where do you need my cover to push back on scope, timing, or staffing?",
     ],
     followups: [
-      "Create a short watchlist of delivery-heavy asks that may need leadership attention.",
+      "Create a watchlist of delivery-heavy asks that may need leadership attention this week.",
     ],
   },
 };
@@ -99,104 +99,104 @@ const people = {
 const todayData = {
   priorities: [
     {
-      title: "APAC POC needs tighter guardrails",
+      title: "indrive situation needs a short sync and risk framing",
       summary:
-        "The POC request discussed with Anna and Simon looks too broad and risks drifting into free implementation without clean success criteria.",
-      category: "Ask from Simon Farthing",
+        "Jan asked for a short sync because there is a situation around indrive. This is your clearest immediate backlog item after PTO and likely needs quick triage.",
+      category: "Customer escalation",
       action: "Reply now",
       confidence: "High",
     },
     {
-      title: "Rohlik MCP messaging needs to stay disciplined",
+      title: "Rohlik next steps need internal alignment before the follow-up",
       summary:
-        "Customer interest is strong, but the wording needs to stay discovery-led and avoid overcommitting on current readiness.",
-      category: "Customer escalation",
+        "The follow-up after the Rohlik meeting is moving toward a demo and deeper product discussion. The team needs one aligned internal sync before the next external step.",
+      category: "Strategic project",
       action: "Follow up today",
+      confidence: "High",
+    },
+    {
+      title: "PUIG APAC channel request looks detailed and executive-facing",
+      summary:
+        "Jakub shared a dense agenda request for PUIG covering KakaoTalk, Line, integration setup, data identity, and training. This needs clear ownership and likely a scoped response.",
+      category: "Strategic project",
+      action: "Book time",
+      confidence: "High",
+    },
+    {
+      title: "Simon-related AI and note-taking direction is becoming a real signal",
+      summary:
+        "Simon is actively shaping a view around note-taking, knowledge management, MCP-style connectivity, and weekly summarization. This aligns closely with what you are building here and is worth tracking as proactive context.",
+      category: "Ask from Simon Farthing",
+      action: "Watch only",
       confidence: "Medium",
     },
     {
-      title: "Masterclass AI value story needs owner clarity",
+      title: "POW benchmarking thread produced useful customer proof points",
       summary:
-        "You were asked for customer participant names and speaker clarity. This is worth closing quickly because it shapes customer-facing positioning.",
+        "Hugo, Sofia, Andrea, and Lukas added real field perspective on why Bloomreach-owned benchmarks matter and where current data is weak. This is one of the strongest strategic threads from your time away.",
       category: "Strategic project",
       action: "Delegate",
       confidence: "Medium",
     },
-    {
-      title: "Feature signal from POW should be closed into a recommendation",
-      summary:
-        "Predictions, Recommendation+, Loomi Analytics, and benchmarking stories now need a clear next owner and synthesis.",
-      category: "Strategic project",
-      action: "Book time",
-      confidence: "Medium",
-    },
-    {
-      title: "NPS follow-up quality matters more than the headline score",
-      summary:
-        "NPS 57 is a strong win, but detractor and neutral follow-ups need a real status check from the manager layer.",
-      category: "People issue",
-      action: "Capture for 1:1",
-      confidence: "Medium",
-    },
   ],
   actions: [
-    "Reply to the APAC POC thread with a short framework: narrow scope, define pass/fail success metrics, no disguised free implementation.",
-    "Close the Rohlik wording with Sofia and keep the message focused on discovery with Product.",
-    "Ask for a single owner and deadline on the POW benchmarking and feature evidence threads.",
+    "Sync with Jan on indrive first and decide if it is true escalation, renewal risk, or just monitoring.",
+    "Ask Sofia for the agreed Rohlik internal sync plan, owner list, and timing before the next customer-facing step.",
+    "Push PUIG into a clearer owner-based action plan instead of leaving it as a dense requirements message.",
   ],
   wins: [
-    "Boardriders visit already got Simon's green light.",
-    "February NPS at 57 is a strong proof point.",
-    "POW enablement cadence looks organized and visible across roles.",
+    "POW benchmarking thread now contains stronger real customer examples and practical field insight.",
+    "Rohlik conversation moved into concrete next steps instead of staying at curiosity level.",
+    "Customer event and invite coordination kept moving while you were out.",
   ],
   evidence: [
     {
-      title: "APAC POC signal",
+      title: "indrive signal",
       text:
-        "Anna asked for guidance after Simon suggested reaching out, and Steve's answer already points to over-scoped PoC design.",
+        "Jan asked for a short sync because of a situation around indrive and suggested you should be mentally ready for the topic.",
     },
     {
-      title: "Rohlik / MCP signal",
+      title: "Rohlik signal",
       text:
-        "Sofia is actively shaping external wording and there is clear need to manage customer expectations carefully.",
+        "Sofia summarized next steps with Meera, Pieter, and others: follow-up demo, internal alignment, and a tighter approach before the next customer call.",
     },
     {
-      title: "POW strategic signal",
+      title: "POW benchmarking signal",
       text:
-        "Benchmarking stories, feature adoption feedback, and NPS follow-ups are all active but still need closure and ownership.",
+        "Over the last days the team added both business value arguments and reliability concerns around benchmarking, plus several customer examples.",
     },
   ],
 };
 
 const weeklyData = {
   wins: [
-    "Strong NPS headline with visible momentum around follow-ups.",
-    "Boardriders visit got leadership approval and supports relationship repair plus growth.",
-    "POW enablement sessions are running with clear role-based structure.",
+    "Benchmarking conversation in POW became materially stronger with real stories and practitioner feedback.",
+    "Rohlik moved from exploratory interest into a more structured next-step motion with Product involvement.",
+    "Customer event preparation and invite coordination stayed active and visible while you were OOO.",
   ],
   risks: [
-    "POC scope creep remains a real risk where commercial ambition outruns realistic delivery boundaries.",
-    "AI/MCP messaging could overpromise if not kept tightly aligned with product reality.",
-    "Some strategic asks still look like open collection exercises without named closure owners.",
+    "indrive may require immediate attention and is your clearest short-term escalation signal.",
+    "PUIG/APAC ask is detailed enough to become messy unless ownership and scope are tightened quickly.",
+    "Rohlik can still drift into expectation risk if the team does not align internally before the next customer-facing step.",
   ],
   loops: [
-    "Benchmarking evidence still needs a clear collection deadline.",
-    "Feature feedback should turn into a recommendation, not remain a thread.",
-    "Need a clean view of detractor and neutral follow-up completion.",
+    "Need a single summary and owner for benchmarking next steps out of the POW thread.",
+    "Need a named owner and response structure for the PUIG APAC channel request.",
+    "Need clarity on whether Simon's note-taking and weekly summary signal should influence your assistant roadmap now or later.",
   ],
   actions: [
-    "Push managers for a status readout on customer risk and NPS follow-through.",
-    "Close the APAC POC framing and document a reusable CS point of view on PoC scope.",
-    "Confirm ownership for AI event messaging and customer story collection.",
+    "Triage indrive first, then lock the next two or three strategic threads rather than trying to clear everything at once.",
+    "Ask for concise owner/deadline based summaries on Rohlik, PUIG, and benchmarking.",
+    "Decide which of the last-three-day threads belong in 1:1s versus your own leadership queue.",
   ],
 };
 
 const threadSample = {
-  link: "Rohlik MCP / Product discovery thread",
+  link: "Rohlik follow-up / Product alignment thread",
   text:
-    "Customer wants to test MCP and assumes the capability is already available for broader usage. Sofia is preparing the wording, Product will join the call, and there is uncertainty around what is actually ready vs still exploratory.",
+    "The customer is interested in MCP and agent-related use cases. Product and supporting teams joined the call and the next move is likely a follow-up demo plus an internal alignment before going back to the customer.",
   docs:
-    "Notes:\n- Goal of the call is discovery and use-case understanding\n- Avoid overpromising on production readiness\n- Position Product involvement as a way to understand needs and shape next steps\n- Keep the message focused on customer value and realistic scope",
+    "Notes:\n- Goal is to understand the use cases and shape the next step responsibly\n- Avoid overpromising on current production readiness\n- Internal sync should happen before the next customer-facing call\n- Keep the message focused on value, realistic scope, and owner clarity",
 };
 
 function setHero(view) {
